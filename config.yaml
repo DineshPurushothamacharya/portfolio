@@ -1,0 +1,98 @@
+baseURL: "https://dineshacharya.com"
+languageCode: en-us
+title: Dinesh Purushothamacharya
+theme: 
+  - PaperMod
+  - hugo-embed-pdf-shortcode
+enableInlineShortcodes : true
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 20
+    - identifier: resume
+      name: Resume
+      url: /resume
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 40
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Dinesh Purushothamacharya"
+    subtitle: Hi 👋! I'm Dinesh, an ambitious Software Engineer, I build highly scalable and reliable backend system.
+    imageUrl: "home/profile-pic.png"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:Dinesh.Purushothamacharya@outlook.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/dineshpurushothamacharya"
+    - name: "github"
+      url: "https://github.com/DineshPurushothamacharya"
+    - name: "cv"
+      url: /resume
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
